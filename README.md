@@ -1,64 +1,96 @@
-# APAC Living Sector 2026 Outlook
+# APAC Living Sector 2026 · Remarble Longform Essay
 
-**Remarble · APAC Real Estate Intelligence**
+A longform essay on Asia-Pacific residential real estate investment, synthesizing 18 global research houses' 2026 outlooks with classical urban economics frameworks.
 
-아시아·태평양 주거 부동산 섹터의 2026년 투자 전망을 다룬 롱폼 에디토리얼 리포트. 글로벌 리서치 기관 18곳의 2026년 전망과 도시경제학 고전 프레임워크(Alonso-Muth-Mills · Marshall · Glaeser-Gyourko · Tiebout)를 Remarble의 자체 분석 축으로 통합했습니다.
-
-🌐 **Live site**: [article.remarble.co](https://article.remarble.co)
+**Live URL**: [article.remarble.co](https://article.remarble.co)
 
 ---
 
-## 주요 내용
+## Files
 
-- **Ch Ⅰ** 서문 — 왜 지금, 왜 Living인가
-- **Ch Ⅱ** 세 가지 구조적 변화 — 가구·공급·자본의 주인
-- **Ch Ⅲ** 도시경제학 프레임워크
-- **Ch Ⅳ** 네 시장의 자본 구조 — Tokyo · Seoul · Singapore · Australia · 기타
-- **Ch Ⅴ** 투자 전략 매트릭스
-- **Ch Ⅵ** 리스크 프레임
-
-## 참고한 글로벌 리서치
-
-CBRE · JLL · Savills · Cushman & Wakefield · Colliers · Newmark · PGIM · LaSalle · Hines · Nuveen · Blackstone · Brookfield · MetLife Investment Management · Morgan Stanley · Goldman Sachs · PwC & ULI · Deloitte · KPMG
+| File | Description |
+|---|---|
+| `index.html` | English edition (main) |
+| `index_ko.html` | Korean edition (한국어판) |
+| `thumb.png` | Open Graph / social thumbnail (dark theme, 2400×1256) |
+| `CNAME` | Custom domain: `article.remarble.co` |
+| `README.md` | This file |
 
 ---
 
-## 파일 구조
+## Deployment
 
+### 1. GitHub Pages Setup
+
+1. Create a public GitHub repository
+2. Upload all files to the repository root
+3. Settings → Pages → Source: `main` branch, `(root)` folder
+4. Save
+
+### 2. Custom Domain (WordPress.com DNS)
+
+Add CNAME record:
 ```
-├── index.html     # 리포트 본문 (단일 파일)
-├── thumb.png      # OG/Twitter 카드 썸네일 (2400×1256)
-├── CNAME          # 커스텀 도메인 설정
-└── README.md      # 이 문서
+Type:   CNAME
+Name:   article
+Value:  YOUR-GITHUB-USERNAME.github.io
+TTL:    3600
 ```
 
-모든 에셋은 `index.html` 안에 인라인 임베딩되어 있습니다(로고 SVG, 폰트 링크 등). 단일 파일로 자체 완결.
+### 3. Enable HTTPS
 
-## 유지보수
-
-### 콘텐츠 수정
-
-1. `index.html` 직접 편집 (GitHub 웹 UI에서 Edit 아이콘)
-2. Commit → 약 1~3분 후 자동 반영 (CDN 캐시)
-
-### 썸네일 교체
-
-1. `thumb.png`를 같은 해상도(2400×1256)로 교체
-2. SNS 플랫폼에서 캐시 리셋 필요 시:
-   - LinkedIn: https://www.linkedin.com/post-inspector/
-   - Facebook/Instagram: https://developers.facebook.com/tools/debug/
-
-### 도메인 이전
-
-미래에 `remarble.co/article`로 통합 시:
-1. 새 위치에 콘텐츠 배포
-2. GitHub Pages `CNAME`에서 도메인 제거
-3. DNS에서 `article` CNAME 레코드를 `remarble.co`로 301 리다이렉트 설정
+After DNS propagation (10min–2hr):
+- GitHub Settings → Pages → Check "Enforce HTTPS"
 
 ---
 
-## 라이선스
+## Language Toggle
 
-© 2026 Remarble. All rights reserved.
+The header contains an EN/KO toggle allowing seamless switching between editions. Both files are stand-alone HTML documents with identical design, structure, and interactive elements (dark/light mode, charts, reveal animations).
 
-Brand names of third-party research houses are used for informational reference only. No endorsement or partnership implied.
+### Link Structure
+
+- **English** (main): `https://article.remarble.co` → `index.html`
+- **Korean**: `https://article.remarble.co/index_ko.html`
+
+---
+
+## Structure (Both Editions)
+
+- **Cover** — Why Now, Why Living?
+- **Chapter I** — The Question
+- **Chapter II** — The Three Shifts (Households · Supply · Capital)
+- **Chapter III** — The Framework (Alonso · Marshall · Glaeser · Tiebout)
+- **Chapter IV** — The Markets
+  - Market Architecture (4 cards)
+  - Tokyo · Developer-Led
+  - Seoul · Informal Finance-Driven
+  - Singapore · State-Led
+  - Australia · Global Capital Competition
+  - Other Markets (Hong Kong, China, India)
+- **Chapter V** — Strategy (Core / Core+ / Value-Add / Opportunistic)
+- **Chapter VI** — Risk (Macro · Policy · Execution)
+- **Closing** — From "emerging" to "core"
+- **Sources** — 21 institutional references
+
+---
+
+## Tech
+
+- Pure HTML/CSS/JavaScript (no framework, no build step)
+- Chart.js for embedded visualizations
+- System fonts: Inter (sans), Playfair Display (display), JetBrains Mono (mono)
+- Dark mode default, light mode toggle
+- Self-contained (no external assets beyond CDN fonts)
+
+---
+
+## About Remarble
+
+Remarble is an APAC-focused real estate intelligence firm, building Seoul-grade analytical frameworks for institutional Living sector investors across gateway markets.
+
+[remarble.co](https://remarble.co)
+
+---
+
+*© 2026 Remarble. Published April 2026.*
