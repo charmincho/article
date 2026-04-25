@@ -113,6 +113,20 @@
     display: flex; align-items: center; gap: 10px;
   }
   .brand-rule { width: 20px; height: 1px; background: var(--ink-2); }
+  .brand-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 16px;
+  }
+  .brand-logo {
+    height: 28px;
+    width: auto;
+  }
+  .brand-logo-light { display: block; }
+  .brand-logo-dark { display: none; }
+  [data-theme="dark"] .brand-logo-light { display: none; }
+  [data-theme="dark"] .brand-logo-dark { display: block; }
   .nav-links { display: flex; gap: 2px; list-style: none; font-family: var(--sans); }
   .nav-links a {
     color: var(--ink-3); text-decoration: none; font-size: 13px; font-weight: 500;
@@ -795,6 +809,10 @@
 
 <header class="masthead">
   <div class="masthead-inner">
+    <a href="https://remarble.co" class="brand-logo-link" target="_blank" rel="noopener">
+      <img src="Remarble-Primary.png" alt="Remarble" class="brand-logo brand-logo-light" />
+      <img src="Remarble-White.png" alt="Remarble" class="brand-logo brand-logo-dark" />
+    </a>
     <div class="brand">
       <span class="brand-rule"></span>
       APAC Living · 2026
@@ -852,7 +870,7 @@
   </div>
 
   <div class="prose reveal">
-    <p class="drop-cap">In the autumn of 2025, something unusual surfaced across the global real estate industry. CBRE and JLL — rivals in advisory. Blackstone and Nuveen — opposites in investment style. PGIM and Hines — divided by home geography. Eighteen of the world's leading research and investment houses, as if on cue, began pointing in the same direction.</p>
+    <p class="drop-cap">In the autumn of 2025, something unusual surfaced across the global real estate industry. CBRE and JLL, Blackstone and Nuveen, PGIM and Hines — eighteen major research and investment institutions, each with different mandates and methodologies, began pointing in the same direction.</p>
 
     <p>Incorporate APAC Living as a core asset allocation in your portfolio.</p>
 

@@ -113,6 +113,20 @@
     display: flex; align-items: center; gap: 10px;
   }
   .brand-rule { width: 20px; height: 1px; background: var(--ink-2); }
+  .brand-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 16px;
+  }
+  .brand-logo {
+    height: 28px;
+    width: auto;
+  }
+  .brand-logo-light { display: block; }
+  .brand-logo-dark { display: none; }
+  [data-theme="dark"] .brand-logo-light { display: none; }
+  [data-theme="dark"] .brand-logo-dark { display: block; }
   .nav-links { display: flex; gap: 2px; list-style: none; font-family: var(--sans); }
   .nav-links a {
     color: var(--ink-3); text-decoration: none; font-size: 13px; font-weight: 500;
@@ -795,6 +809,10 @@
 
 <header class="masthead">
   <div class="masthead-inner">
+    <a href="https://remarble.co" class="brand-logo-link" target="_blank" rel="noopener">
+      <img src="Remarble-Primary.png" alt="Remarble" class="brand-logo brand-logo-light" />
+      <img src="Remarble-White.png" alt="Remarble" class="brand-logo brand-logo-dark" />
+    </a>
     <div class="brand">
       <span class="brand-rule"></span>
       APAC Living · 2026
@@ -852,7 +870,7 @@
   </div>
 
   <div class="prose reveal">
-    <p class="drop-cap">2025년 가을, 글로벌 부동산 업계에서 재미있는 장면이 연출됐다. 부동산 컨설팅 시장에서 경쟁하는 CBRE와 JLL, 투자 스타일이 다른 Blackstone과 Nuveen, 지역 기반이 다른 PGIM과 Hines 등—세계적인 리서치·투자기관 열여덟 곳이—약속이나 한 듯 한 방향을 가리키기 시작했다.</p>
+    <p class="drop-cap">2025년 가을, 글로벌 부동산 업계에서 재미있는 장면이 연출됐다. CBRE와 JLL, Blackstone과 Nuveen, PGIM과 Hines—저마다 다른 관점과 방법론을 가진 세계적인 리서치·투자기관 열여덟 곳이 약속이나 한 듯 한 방향을 가리키기 시작했다.</p>
 
     <p>APAC Living을 포트폴리오 '핵심 자산 배분(core asset allocation)'으로 편입해라.</p>
 
