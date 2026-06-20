@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Seoul Living · Macro and Policy</title>
+<script>document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="The macro stack holds — surplus, reserves, exports. But record household debt leaves no room to ease, and a crackdown built for speculators has closed both institutional entry routes into Seoul rental housing." />
+<meta property="og:title" content="Seoul Living — Macro and Policy" />
+<meta property="og:description" content="Rate inversion at −1.25%, a record current-account surplus, $427B in reserves — and household debt at 89.4% of GDP that keeps policy locked tight. The second of three essays on Seoul." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Remarble" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAF7F0;
+    --bg-deep: #F2EDE0;
+    --surface: #FFFFFF;
+    --ink: #1C1B18;
+    --ink-2: #4A4842;
+    --ink-3: #7D7A71;
+    --ink-4: #A8A59A;
+    --rule: rgba(28, 27, 24, 0.10);
+    --rule-strong: rgba(28, 27, 24, 0.22);
+    --accent: #05342C;
+    --accent-soft: #DCEFE6;
+    --accent-warm: #0FC76F;
+    --accent-warm-soft: #DCF6E8;
+    --accent-green: #05342C;
+    --accent-green-soft: #DCEFE6;
+    --accent-gold: #9A7028;
+    --accent-gold-soft: #EFE5CF;
+    --accent-red: #B23A2E;
+    --accent-red-soft: #F3DDD8;
+
+    --serif: 'Newsreader', 'Noto Serif KR', Georgia, serif;
+    --display: 'Playfair Display', 'Noto Serif KR', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+    --measure: 680px;
+    --measure-wide: 960px;
+    --container-pad: clamp(24px, 5vw, 48px);
+
+    --t: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-theme="dark"] {
+    --bg: #14130F;
+    --bg-deep: #1C1B17;
+    --surface: #1E1D19;
+    --ink: #EAE6DA;
+    --ink-2: #B8B4A6;
+    --ink-3: #8B8779;
+    --ink-4: #5D5A50;
+    --rule: rgba(234, 230, 218, 0.10);
+    --rule-strong: rgba(234, 230, 218, 0.22);
+    --accent: #4FDB9A;
+    --accent-soft: rgba(79, 219, 154, 0.15);
+    --accent-warm: #0FC76F;
+    --accent-warm-soft: rgba(15, 199, 111, 0.18);
+    --accent-green: #4FDB9A;
+    --accent-green-soft: rgba(79, 219, 154, 0.15);
+    --accent-gold: #C9A55F;
+    --accent-gold-soft: rgba(201, 165, 95, 0.15);
+    --accent-red: #E07A6B;
+    --accent-red-soft: rgba(224, 122, 107, 0.16);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 19px;
+    line-height: 1.78;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background var(--t), color var(--t);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Navigation */
+  .masthead {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250, 247, 240, 0.92);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-bottom: 1px solid var(--rule);
+    transition: background var(--t);
+  }
+  [data-theme="dark"] .masthead { background: rgba(20, 19, 15, 0.92); }
+  .masthead-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 14px var(--container-pad);
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  .brand {
+    font-family: var(--sans);
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-rule { width: 20px; height: 1px; background: var(--ink-2); }
+  .brand-logo-link {
+    display: flex; align-items: center;
+    text-decoration: none; margin-right: 16px;
+  }
+  .brand-logo { height: 28px; width: auto; }
+  .brand-logo-light { display: block; }
+  .brand-logo-dark { display: none; }
+  [data-theme="dark"] .brand-logo-light { display: none; }
+  [data-theme="dark"] .brand-logo-dark { display: block; }
+  .nav-links { display: flex; gap: 2px; list-style: none; font-family: var(--sans); }
+  .nav-links a {
+    color: var(--ink-3); text-decoration: none; font-size: 13px; font-weight: 500;
+    padding: 8px 14px; border-radius: 6px;
+    transition: all var(--t);
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .theme-toggle {
+    background: transparent; border: 1px solid var(--rule-strong);
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    border-radius: 999px; padding: 6px 14px;
+    cursor: pointer; color: var(--ink-2);
+    transition: all var(--t); display: flex; align-items: center; gap: 6px;
+  }
+  .theme-toggle:hover { border-color: var(--ink-3); color: var(--ink); }
+  .lang-toggle {
+    display: inline-flex; align-items: center;
+    border: 1px solid var(--rule-strong);
+    border-radius: 999px; overflow: hidden;
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .lang-toggle a {
+    background: transparent; border: none; cursor: pointer;
+    padding: 6px 12px; color: var(--ink-3);
+    text-decoration: none;
+    transition: all var(--t);
+  }
+  .lang-toggle a.active {
+    background: var(--ink); color: var(--bg);
+  }
+  .lang-toggle a:not(.active):hover { color: var(--ink); }
+  .header-controls { display: flex; align-items: center; gap: 10px; }
+  @media (max-width: 768px) { .nav-links { display: none; } }
+
+  /* Core layout */
+  .prose { max-width: var(--measure); margin: 0 auto; padding: 0 var(--container-pad); }
+  .wide { max-width: var(--measure-wide); margin: 0 auto; padding: 0 var(--container-pad); }
+  .full { max-width: 1200px; margin: 0 auto; padding: 0 var(--container-pad); }
+
+  /* Cover */
+  .cover {
+    min-height: 88vh;
+    padding: clamp(60px, 10vw, 120px) 0 clamp(40px, 6vw, 80px);
+    display: flex; flex-direction: column; justify-content: space-between;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cover-top {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    flex-wrap: wrap;
+  }
+  .cover-center { margin: clamp(60px, 12vw, 160px) 0; }
+  .cover-kicker {
+    font-family: var(--sans); font-size: 13px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .cover-kicker::before { content: ''; width: 32px; height: 2px; background: var(--accent-warm); }
+  .cover h1 {
+    font-family: var(--display);
+    font-size: clamp(44px, 9vw, 104px);
+    font-weight: 500;
+    line-height: 0.96;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
+    color: var(--ink);
+  }
+  .cover h1 em { font-style: italic; color: var(--accent); }
+  .cover-dek {
+    font-family: var(--serif);
+    font-size: clamp(21px, 2.4vw, 28px);
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--ink-2);
+    max-width: 760px;
+    letter-spacing: -0.005em;
+  }
+  .cover-bottom {
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-3);
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .cover-bottom strong { color: var(--ink-2); font-weight: 500; }
+
+  /* Chapter openings */
+  .chapter { padding: clamp(72px, 10vw, 120px) 0 clamp(48px, 6vw, 64px); }
+  .chapter-opener {
+    max-width: var(--measure); margin: 0 auto;
+    padding: 0 var(--container-pad);
+    margin-bottom: clamp(40px, 5vw, 64px);
+  }
+  .chapter-num {
+    font-family: var(--display); font-style: italic;
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: 500; line-height: 1;
+    color: var(--accent-warm);
+    margin-bottom: 8px; display: block;
+  }
+  .chapter-eyebrow {
+    font-family: var(--sans); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 20px;
+  }
+  .chapter h2 {
+    font-family: var(--display);
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 500; line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .chapter h2 em { font-style: italic; color: var(--accent); }
+  .chapter-lede {
+    font-family: var(--serif);
+    font-size: clamp(19px, 1.8vw, 22px);
+    font-weight: 400; line-height: 1.6;
+    color: var(--ink-2);
+    font-style: italic;
+    border-left: 2px solid var(--accent-warm);
+    padding-left: 20px;
+  }
+
+  /* Prose */
+  .prose p {
+    margin-bottom: 1.5em;
+    font-size: clamp(17px, 1.4vw, 19px);
+    line-height: 1.8;
+    color: var(--ink);
+  }
+  .prose p.drop-cap::first-letter {
+    font-family: var(--display);
+    font-size: 4.2em; font-weight: 500;
+    float: left; line-height: 0.85;
+    margin: 0.08em 0.12em 0 0;
+    color: var(--accent);
+  }
+  .prose .note {
+    font-size: 15px; color: var(--ink-3); font-style: italic;
+    padding-left: 20px; border-left: 1px solid var(--rule-strong);
+    margin: 2em 0;
+  }
+  .prose strong { font-weight: 600; color: var(--ink); }
+  .prose em { font-style: italic; }
+
+  /* Pull quote */
+  .pullquote {
+    max-width: var(--measure); margin: clamp(48px, 6vw, 72px) auto;
+    padding: 0 var(--container-pad); text-align: center;
+  }
+  .pullquote-text {
+    font-family: var(--display); font-style: italic;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 500; line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--accent); position: relative;
+  }
+  .pullquote-text::before, .pullquote-text::after {
+    content: ''; display: block; width: 48px; height: 2px;
+    background: var(--accent-warm); margin: 24px auto;
+  }
+
+  /* Metric row */
+  .metric-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: clamp(24px, 4vw, 40px);
+    margin: clamp(40px, 5vw, 56px) 0;
+    padding: clamp(32px, 4vw, 40px) 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .metric-num {
+    font-family: var(--display);
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 500; letter-spacing: -0.02em;
+    line-height: 1.05; color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .metric-num.red { color: var(--accent-red); }
+  .metric-cap { font-family: var(--sans); font-size: 12px; color: var(--ink-3); line-height: 1.5; }
+  .metric-cap strong { color: var(--ink-2); font-weight: 500; display: block; margin-bottom: 2px; font-size: 13px; }
+
+  /* Chart sections */
+  .chart-section {
+    padding: clamp(48px, 7vw, 80px) 0;
+    background: var(--bg-deep);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .chart-intro {
+    max-width: var(--measure); margin: 0 auto clamp(32px, 4vw, 48px);
+    padding: 0 var(--container-pad);
+  }
+  .chart-intro .eyebrow {
+    font-family: var(--sans); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 16px;
+  }
+  .chart-intro h3 {
+    font-family: var(--display);
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 500; line-height: 1.15;
+    letter-spacing: -0.015em; margin-bottom: 12px;
+  }
+  .chart-intro p { font-size: 17px; color: var(--ink-2); line-height: 1.7; }
+  .chart-container { max-width: 1000px; margin: 0 auto; padding: 0 var(--container-pad); }
+  .chart-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: clamp(24px, 4vw, 40px);
+  }
+  .chart-canvas { position: relative; width: 100%; }
+  .chart-canvas.h-bar      { height: 340px; }
+  .chart-canvas.h-bar-tall { height: 440px; }
+  .chart-canvas.h-line     { height: 360px; }
+  .chart-canvas.h-combo    { height: 400px; }
+  .chart-canvas.h-scatter  { height: 420px; }
+  @media (max-width: 600px) {
+    .chart-canvas.h-bar      { height: 280px; }
+    .chart-canvas.h-bar-tall { height: 380px; }
+    .chart-canvas.h-line     { height: 300px; }
+    .chart-canvas.h-combo    { height: 340px; }
+    .chart-canvas.h-scatter  { height: 380px; }
+  }
+  .chart-caption {
+    font-family: var(--sans); font-size: 12px;
+    color: var(--ink-3); margin-top: 16px;
+    line-height: 1.6; font-style: italic;
+    max-width: 720px;
+  }
+  .chart-source {
+    font-family: var(--sans); font-size: 11px;
+    color: var(--ink-3); margin-top: 12px;
+    letter-spacing: 0.03em;
+  }
+  .chart-source strong { font-weight: 600; color: var(--ink-2); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* Twin charts */
+  .twin-charts { display: grid; gap: 24px; grid-template-columns: 1fr; }
+  @media (min-width: 820px) { .twin-charts { grid-template-columns: 1fr 1fr; } }
+  .twin-charts .chart-card { padding: clamp(20px, 3vw, 28px); }
+  .twin-charts .twin-title {
+    font-family: var(--display); font-size: 17px; font-weight: 500;
+    margin-bottom: 12px; color: var(--ink); letter-spacing: -0.005em;
+  }
+  .twin-charts .twin-eyebrow {
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent-warm); margin-bottom: 6px;
+  }
+  .twin-charts .chart-canvas { height: 260px; }
+  @media (max-width: 600px) { .twin-charts .chart-canvas { height: 220px; } }
+
+  /* Figure inline */
+  .figure-inline {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding: clamp(20px, 3vw, 28px) clamp(24px, 4vw, 32px);
+    background: var(--bg-deep);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+  }
+  .figure-inline .label {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-3);
+    margin-bottom: 14px;
+  }
+  .figure-inline .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px 32px;
+  }
+  .figure-inline .num {
+    font-family: var(--display); font-size: 26px; font-weight: 500;
+    letter-spacing: -0.015em; color: var(--ink);
+    line-height: 1.1; margin-bottom: 4px;
+  }
+  .figure-inline .sub {
+    font-family: var(--sans); font-size: 12px; color: var(--ink-3); line-height: 1.4;
+  }
+
+  /* Central-bank rate stack */
+  .rate-stack {
+    display: grid; grid-template-columns: 1fr; gap: 12px;
+    margin-top: 8px;
+  }
+  @media (min-width: 620px) { .rate-stack { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 920px) { .rate-stack { grid-template-columns: 1fr 1fr 1fr; } }
+  .rs-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: clamp(18px, 2.5vw, 22px);
+    position: relative;
+  }
+  .rs-card.featured { border-color: var(--accent-warm); }
+  .rs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .rs-flag {
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; color: var(--ink-3);
+    border: 1px solid var(--rule); border-radius: 2px;
+    padding: 2px 7px;
+  }
+  .rs-card.featured .rs-flag { color: var(--accent-warm); border-color: var(--accent-warm); }
+  .rs-bank { font-family: var(--display); font-size: 18px; font-weight: 500; color: var(--ink); letter-spacing: -0.005em; }
+  .rs-rate { font-family: var(--display); font-size: clamp(30px, 4vw, 38px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; color: var(--accent); margin: 6px 0 8px; }
+  .rs-card:not(.featured) .rs-rate { color: var(--ink); }
+  .rs-note { font-family: var(--sans); font-size: 12px; color: var(--ink-3); line-height: 1.5; }
+
+  /* Constraint cards */
+  .constraint-grid {
+    display: grid; grid-template-columns: 1fr; gap: 16px;
+    margin-top: 8px;
+  }
+  @media (min-width: 760px) { .constraint-grid { grid-template-columns: 1fr 1fr; } }
+  .ct-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: clamp(20px, 3vw, 26px);
+    position: relative;
+  }
+  .ct-card .track {
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent-red); margin-bottom: 10px;
+  }
+  .ct-card.build .track { color: var(--accent-gold); }
+  .ct-card h4 {
+    font-family: var(--display); font-size: 20px; font-weight: 500;
+    letter-spacing: -0.01em; line-height: 1.15;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  .ct-card p {
+    font-family: var(--serif); font-size: 15px; line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .ct-card p strong { color: var(--ink); font-weight: 600; }
+
+  /* Closing */
+  .closing {
+    padding: clamp(80px, 12vw, 140px) 0 clamp(60px, 8vw, 100px);
+    background: var(--bg-deep);
+    border-top: 1px solid var(--rule);
+  }
+  .closing-inner {
+    max-width: var(--measure); margin: 0 auto;
+    padding: 0 var(--container-pad); text-align: center;
+  }
+  .closing-eyebrow {
+    font-family: var(--sans); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--accent-warm); margin-bottom: 32px;
+  }
+  .closing-text {
+    font-family: var(--display); font-style: italic;
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 500; line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .closing-text em { color: var(--accent); }
+  .closing-signature {
+    margin-top: 56px; font-family: var(--sans);
+    font-size: 13px; color: var(--ink-3); letter-spacing: 0.1em;
+  }
+
+  /* Citation */
+  .cite {
+    font-family: var(--sans); font-size: 0.68em;
+    vertical-align: super; line-height: 0;
+    color: var(--accent-warm); text-decoration: none;
+    font-weight: 600; margin-left: 1px;
+    transition: color var(--t);
+  }
+  .cite:hover { color: var(--accent); text-decoration: underline; }
+  .cite::before { content: '['; }
+  .cite::after { content: ']'; }
+
+  /* Notes */
+  .notes-section {
+    padding: clamp(60px, 8vw, 100px) 0 clamp(48px, 6vw, 72px);
+    background: var(--bg-deep);
+    border-top: 1px solid var(--rule);
+  }
+  .notes-section .head {
+    max-width: var(--measure); margin: 0 auto clamp(32px, 4vw, 48px);
+    padding: 0 var(--container-pad);
+  }
+  .notes-section .eyebrow {
+    font-family: var(--sans); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 14px;
+  }
+  .notes-section h3 {
+    font-family: var(--display);
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 500; letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+  .notes-list {
+    max-width: var(--measure); margin: 0 auto;
+    padding: 0 var(--container-pad);
+    font-family: var(--sans);
+    font-size: 14px; line-height: 1.65;
+    color: var(--ink-2);
+  }
+  .notes-list ol { list-style: none; padding: 0; counter-reset: note; }
+  .notes-list li {
+    position: relative;
+    padding: 14px 0 14px 52px;
+    border-bottom: 1px solid var(--rule);
+    counter-increment: note;
+  }
+  .notes-list li:last-child { border-bottom: none; }
+  .notes-list li::before {
+    content: counter(note);
+    position: absolute; left: 0; top: 16px;
+    font-family: var(--mono); font-size: 11px; font-weight: 600;
+    color: var(--accent-warm);
+    background: var(--surface);
+    border: 1px solid var(--rule-strong);
+    padding: 3px 8px; border-radius: 3px;
+    min-width: 30px; text-align: center;
+  }
+  .notes-list li em { font-style: italic; color: var(--ink); }
+  .notes-list li strong { color: var(--ink); font-weight: 600; }
+  .notes-list .kind {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 600; color: var(--accent-warm);
+    margin-right: 8px;
+  }
+
+  /* Colophon */
+  .colophon {
+    padding: 56px 0 48px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 13px; color: var(--ink-3);
+    line-height: 1.7;
+  }
+  .colophon .block { margin-bottom: 28px; max-width: var(--measure-wide); }
+  .colophon h5 {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-2); margin-bottom: 10px;
+  }
+  .colophon-meta {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    padding-top: 24px; border-top: 1px solid var(--rule);
+    font-size: 12px;
+  }
+
+  /* Animations */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 700ms, transform 700ms; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* Reading progress */
+  .progress-bar {
+    position: fixed; top: 0; left: 0; height: 2px;
+    background: var(--accent-warm);
+    width: 0; z-index: 200;
+    transition: width 80ms linear;
+  }
+
+  /* Print */
+  @media print {
+    .masthead, .theme-toggle { display: none; }
+    body { background: white; color: black; font-size: 11pt; line-height: 1.6; }
+    .chapter, .chart-section { page-break-inside: avoid; }
+    .cover { min-height: auto; }
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<div class="progress-bar" id="progress"></div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="../" class="brand-logo-link">
+      <img src="Remarble-Primary.png" alt="Remarble" class="brand-logo brand-logo-light" />
+      <img src="Remarble-White.png" alt="Remarble" class="brand-logo brand-logo-dark" />
+    </a>
+    <div class="brand">
+      <span class="brand-rule"></span>
+      Seoul Living · 2026
+    </div>
+    <ul class="nav-links">
+      <li><a href="#ch1">Introduction</a></li>
+      <li><a href="#ch2">Cost of Capital</a></li>
+      <li><a href="#ch3">The Buffer</a></li>
+      <li><a href="#ch4">The Constraint</a></li>
+      <li><a href="#ch5">Synthesis</a></li>
+      <li><a href="#notes">Sources</a></li>
+    </ul>
+    <div class="header-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">☀</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== COVER ========== -->
+<section class="cover">
+  <div class="full">
+    <div class="cover-top">
+      <span>REMARBLE RESEARCH · MAY 2026</span>
+      <span>LONGFORM ESSAY · READ TIME ≈ 13 MIN</span>
+    </div>
+
+    <div class="cover-center">
+      <div class="cover-kicker">The Second Essay · Macro &amp; Policy</div>
+      <h1>The Macro Holds.<br />The <em>Policy Doesn't</em>.</h1>
+      <p class="cover-dek">The first essay made the structural case. This one asks the harder question: with the macro stack intact but the policy regime tightening, can institutional capital still get in — and through which door?</p>
+    </div>
+
+    <div class="cover-bottom">
+      <span><strong>Tension:</strong> External strength · domestic debt · a crackdown that overshoots</span>
+      <span><strong>Method:</strong> BOK · US SEC / FRED · ValleyAI · OECD · Remarble</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CHAPTER 01 ========== -->
+<article class="chapter" id="ch1">
+  <div class="chapter-opener reveal">
+    <span class="chapter-num">Ⅰ</span>
+    <div class="chapter-eyebrow">THE QUESTION</div>
+    <h2>The Macro Is the Risk — <em>the Surplus Holds It</em></h2>
+    <p class="chapter-lede">The structural case for Seoul rental housing is settled. The macro is a real risk — a sustained rate inversion, a pressured won — and it is the current-account surplus that holds the line. Layered on top sits the policy regime, the harder wall this essay builds toward.</p>
+  </div>
+
+  <div class="prose reveal">
+    <p class="drop-cap">The first essay in this series read Seoul's rental market through three structural forces — demand rising, supply tightening, capital rotating — and concluded that the market is at an inflection. None of that conclusion depended on where interest rates sat, or what the won was doing, or which regulation passed last quarter. The structural read stands on its own.</p>
+
+    <p>But an institutional investor does not deploy into a structural thesis in a vacuum. The question that follows is the one this essay takes up: is the surrounding environment — the cost of capital, the currency, the policy regime — a help, a neutral, or an obstacle? And the answer for Seoul today is unusually layered. The macro is under genuine pressure — a sustained rate inversion and a won anchored above 1,400 — and what holds it together is the external account. A persistent current-account surplus, reserves near USD 427 billion, and record export strength give the Bank of Korea room to hold rates rather than defend the won. The surplus is a buffer absorbing real strain — not evidence the strain is absent.<a href="#note-1" class="cite">1</a></p>
+
+    <p>The obstacle sits one level down. Korea's household-debt-to-GDP ratio is among the highest in the OECD, and on a <em>jeonse</em>-inclusive basis is the highest in the world.<a href="#note-2" class="cite">2</a> That single number leaves the policymaker no room to ease — and it has driven a multi-year crackdown on multi-home ownership. The crackdown was built for speculators. But its instruments — stripped tax exemptions, near-zero loan-to-value on additional homes — do not distinguish between a speculator with three apartments and a corporate operator running a thousand-unit rental platform. The policy meant for one has landed on the other.</p>
+
+    <div class="metric-row">
+      <div>
+        <div class="metric-num red">−1.25%<a href="#note-1" class="cite">1</a></div>
+        <div class="metric-cap"><strong>BOK–Fed Policy Rate Gap</strong>Sustained inversion · pressure on KRW</div>
+      </div>
+      <div>
+        <div class="metric-num">$427B<a href="#note-1" class="cite">1</a></div>
+        <div class="metric-cap"><strong>FX Reserves</strong>Top-10 globally · ample external buffer</div>
+      </div>
+      <div>
+        <div class="metric-num red">89.4%<a href="#note-2" class="cite">2</a></div>
+        <div class="metric-cap"><strong>Household Debt / GDP</strong>Among highest in OECD · jeonse-inclusive figure highest globally</div>
+      </div>
+      <div>
+        <div class="metric-num">+48.0%<a href="#note-3" class="cite">3</a></div>
+        <div class="metric-cap"><strong>Export Growth (YoY)</strong>AI-driven semiconductors · 11 straight record months</div>
+      </div>
+    </div>
+
+    <p>This essay traces that tension in three movements. First, where Korea sits in the APAC cost-of-capital stack, and why a rate inversion that has now run more than three years keeps the won anchored above 1,400. Second, the macro buffer — surplus, reserves, exports — that absorbs the currency pressure and explains why the BOK can hold. And third, the structural constraint — household debt and the policy it forces — that closes both of the routes institutional capital would otherwise take into the market.</p>
+  </div>
+</article>
+
+<!-- ========== PULL QUOTE 1 ========== -->
+<div class="pullquote reveal">
+  <p class="pullquote-text">The macro stack is a buffer.<br />The household-debt overhang is <em>a brake</em>.<br />Policy sits where the two meet.</p>
+</div>
+
+<!-- ========== CHAPTER 02 — COST OF CAPITAL ========== -->
+<article class="chapter" id="ch2">
+  <div class="chapter-opener reveal">
+    <span class="chapter-num">Ⅱ</span>
+    <div class="chapter-eyebrow">THE FIRST READ · COST OF CAPITAL</div>
+    <h2>Six Central Banks, <em>Six Regimes</em></h2>
+    <p class="chapter-lede">Cost of capital is the first thing a real-estate underwriter prices. Across APAC, six central banks sit at six different points on the curve — and Korea sits in the middle, with the least room to move.</p>
+  </div>
+
+  <div class="prose reveal">
+    <p>For a rental-housing investor, the policy rate is not an abstraction — it is the anchor of every cap rate, every financing cost, every discount applied to future cash flow. So the first question is simply: where does Korea sit relative to its peers, and relative to the Fed that effectively sets the ceiling on its room to act?</p>
+
+    <p>The APAC stack spreads wide. Japan, even after the Bank of Japan's slow exit from negative rates, remains ultra-loose at the bottom. Australia sits at the top with a tightening bias. Hong Kong, pegged to the US dollar, imports the Fed's stance directly. Singapore manages through the exchange rate rather than a policy rate. And Korea sits in the middle of the range — but with a particular problem: its base rate at 2.50% sits 125 basis points below the US, an inversion that constrains how far the BOK can cut without putting fresh pressure on the won.<a href="#note-1" class="cite">1</a></p>
+  </div>
+
+  <div class="wide reveal" style="margin-top: clamp(40px, 5vw, 56px);">
+    <div class="rate-stack">
+      <div class="rs-card">
+        <div class="rs-head"><span class="rs-bank">US · Fed</span><span class="rs-flag">FRED</span></div>
+        <div class="rs-rate">3.75%</div>
+        <div class="rs-note">The reference rate. Sets the effective ceiling on the BOK's room to ease.</div>
+      </div>
+      <div class="rs-card featured">
+        <div class="rs-head"><span class="rs-bank">Korea · BOK</span><span class="rs-flag">KR</span></div>
+        <div class="rs-rate">2.50%</div>
+        <div class="rs-note"><strong style="color:var(--accent-warm)">−125bps vs US.</strong> Mid-range for APAC, but the least room to move.</div>
+      </div>
+      <div class="rs-card">
+        <div class="rs-head"><span class="rs-bank">Japan · BOJ</span><span class="rs-flag">JP</span></div>
+        <div class="rs-rate">0.75%</div>
+        <div class="rs-note">Still ultra-loose after a slow exit from negative-rate policy.</div>
+      </div>
+      <div class="rs-card">
+        <div class="rs-head"><span class="rs-bank">Australia · RBA</span><span class="rs-flag">AU</span></div>
+        <div class="rs-rate">4.10%</div>
+        <div class="rs-note">Top of the APAC stack, carrying a tightening bias.</div>
+      </div>
+      <div class="rs-card">
+        <div class="rs-head"><span class="rs-bank">Singapore · MAS</span><span class="rs-flag">SG</span></div>
+        <div class="rs-rate">1.30%</div>
+        <div class="rs-note">Overnight rate average; MAS manages policy via the exchange rate.</div>
+      </div>
+      <div class="rs-card">
+        <div class="rs-head"><span class="rs-bank">Hong Kong · HKMA</span><span class="rs-flag">HK</span></div>
+        <div class="rs-rate">4.00%</div>
+        <div class="rs-note">Dollar-pegged — imports the Fed's stance one-for-one.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose reveal" style="margin-top: clamp(40px, 5vw, 56px);">
+    <p>The reason the inversion matters so much for Korea is mechanical. Because the BOK's policy rate moves with the Fed, US rate decisions directly shape how much room Korea has to act. Cut too far ahead of the Fed and the rate differential widens, capital leaves, and the won weakens. That constraint is not theoretical — it has shown up in the currency three separate times this century.</p>
+  </div>
+</article>
+
+<!-- ========== CHART 01: Rate Inversion & KRW ========== -->
+<section class="chart-section reveal">
+  <div class="chart-intro">
+    <div class="eyebrow">Figure 01 · Rate Inversion &amp; the Won</div>
+    <h3>Every inversion has bent the won</h3>
+    <p>US effective federal funds rate against Korea's base rate and the KRW/USD exchange rate, 2000–2026. Each time the US rate has risen above Korea's, the won has weakened — and the current bend hasn't snapped back.</p>
+  </div>
+  <div class="chart-container">
+    <div class="chart-card">
+      <div class="chart-canvas h-line">
+        <canvas id="fxChart" role="img" aria-label="US and Korea policy rates against KRW/USD exchange rate, 2000 to 2026"></canvas>
+      </div>
+      <p class="chart-caption">Three rate inversions since 2000 — 2005–07, 2018–19, and 2022 to present — and the won weakened in all three. The current inversion has now run more than 40 months, roughly twice the duration of prior cycles, keeping KRW anchored above 1,400. Shaded bands mark the dot-com, subprime, and Covid-19 stress periods.</p>
+      <p class="chart-source"><strong>Source</strong> · US SEC / FRED · Bank of Korea · ValleyAI · Remarble. Series stylized for illustration</p>
+    </div>
+  </div>
+</section>
+
+<article class="chapter">
+  <div class="prose reveal">
+    <p>The pattern is consistent enough to be treated as a rule. Three rate inversions since 2000, and in every one the won weakened. What is different this time is duration. The 2005–07 and 2018–19 inversions each lasted roughly twenty months before the differential closed. The current one has run past forty — more than double — and over that span the won has settled into a new range above 1,400 against the dollar rather than reverting.<a href="#note-4" class="cite">4</a></p>
+
+    <p>For a foreign institutional investor, this is the crux of the currency question. A weaker, range-bound won lowers the dollar cost of acquiring Korean assets at entry — an advantage on the way in. The same dynamic raises the question of currency risk on the way out, and of whether returns earned in won translate cleanly back to a dollar- or euro-denominated fund. The duration anomaly suggests the market is not pricing a quick reversion. That, in turn, is why the next question — what holds the won up at all — matters as much as the rate gap itself.</p>
+  </div>
+</article>
+
+<!-- ========== PULL QUOTE 2 ========== -->
+<div class="pullquote reveal">
+  <p class="pullquote-text">Three inversions since 2000.<br />The won weakened in <em>all three</em>.<br />This one has lasted twice as long.</p>
+</div>
+
+<!-- ========== CHAPTER 03 — THE BUFFER ========== -->
+<article class="chapter" id="ch3">
+  <div class="chapter-opener reveal">
+    <span class="chapter-num">Ⅲ</span>
+    <div class="chapter-eyebrow">THE SECOND READ · THE MACRO BUFFER</div>
+    <h2>Pressure on the Won, <em>Surplus in the Books</em></h2>
+    <p class="chapter-lede">A weak currency would normally force a central bank to defend it — by raising rates, or burning reserves. Korea has not had to, for now. What holds the line is export competitiveness — a current-account surplus and a compounding reserve stack absorbing the pressure on the won. It is a real cushion. It is also a contingent one: financed by exports, not a structural all-clear.</p>
+  </div>
+
+  <div class="prose reveal">
+    <p>The puzzle of the last three years is that the won has been under sustained pressure while Korea's external accounts have gone from strong to record-strong. These two facts seem to pull against each other. They don't. The currency pressure comes from the rate differential; the export strength is what lets the Bank of Korea absorb that pressure without acting. The buffer is real — but it is export-financed, which makes it contingent. The same semiconductor-led surge that absorbs the pressure today is exactly what a global slowdown or a turn in the chip cycle would take away.</p>
+
+    <p>Start with the current account. Korea has run a current-account surplus through every macro cycle since 2012 — a structural feature, not a cyclical one.<a href="#note-5" class="cite">5</a> What is new is the scale. Despite the won sitting above 1,400 and despite the rate inversion, the surplus has widened into record territory over 2024–26, driven by semiconductor-led export strength. A country that earns more abroad than it spends does not need to defend its currency aggressively; the inflows do part of the work.</p>
+  </div>
+</article>
+
+<!-- ========== CHART 02: Current Account ========== -->
+<section class="chart-section reveal">
+  <div class="chart-intro">
+    <div class="eyebrow">Figure 02 · Current Account vs Policy Rates</div>
+    <h3>The surplus just hit an all-time high</h3>
+    <p>Korea's current-account balance (USD mn) against US and Korea policy rates, 2000–2026. The surplus has widened to record territory even as the rate inversion and a weak won persist — the export engine, not the rate, is driving it.</p>
+  </div>
+  <div class="chart-container">
+    <div class="chart-card">
+      <div class="chart-canvas h-line">
+        <canvas id="caChart" role="img" aria-label="Korea current account balance against US and Korea policy rates"></canvas>
+      </div>
+      <p class="chart-caption">A persistent surplus since 2012 is what gives the BOK room to hold rates without defending the won. The 2024–26 acceleration is semiconductor-led — AI-driven export demand widening the external gap to a record. Shaded bands mark the dot-com, subprime, and Covid-19 stress periods.</p>
+      <p class="chart-source"><strong>Source</strong> · US SEC / FRED · Bank of Korea · ValleyAI · Remarble. Series stylized for illustration</p>
+    </div>
+  </div>
+</section>
+
+<article class="chapter">
+  <div class="prose reveal">
+    <p>The second leg of the buffer is the reserve stack. Korea's foreign-exchange reserves have grown roughly four-fold this century, from about USD 100 billion in 2000 to near USD 400 billion today — a top-ten position globally.<a href="#note-6" class="cite">6</a> Reserves are the ammunition a central bank uses to defend a currency in a crisis, and Korea's were stress-tested directly in the 2022 won crisis. The buffer drew down briefly as the BOK leaned against the move, then absorbed the shock and rebuilt. That episode is the relevant evidence: the stack is not just large, it has been shown to work under pressure.</p>
+  </div>
+</article>
+
+<!-- ========== CHART 03: FX Reserves ========== -->
+<section class="chart-section reveal">
+  <div class="chart-intro">
+    <div class="eyebrow">Figure 03 · FX Reserves vs Policy Rates</div>
+    <h3>Reserves keep compounding to $400B</h3>
+    <p>Korea's foreign-exchange reserves (USD) against US and Korea policy rates, 2000–2026. A four-fold accumulation, stress-tested in 2022 and rebuilt.</p>
+  </div>
+  <div class="chart-container">
+    <div class="chart-card">
+      <div class="chart-canvas h-line">
+        <canvas id="fxResChart" role="img" aria-label="Korea FX reserves against US and Korea policy rates"></canvas>
+      </div>
+      <p class="chart-caption">FX pressure is real, and the stack holds only because exports do the work. Surplus, reserves, and export strength together absorb the BOK–Fed gap — for now. The 2022 KRW crisis drew reserves down briefly; the buffer absorbed the shock and rebuilt, but the rate gap and household-debt load behind it remain. Shaded bands mark the dot-com, subprime, and Covid-19 stress periods.</p>
+      <p class="chart-source"><strong>Source</strong> · US SEC / FRED · Bank of Korea · ValleyAI · Remarble. Series stylized for illustration</p>
+    </div>
+  </div>
+</section>
+
+<article class="chapter">
+  <div class="prose reveal">
+    <p>Put the export engine and the reserve stack together and a tempting conclusion offers itself: that the surface macro is not what stands between institutional capital and Seoul rental housing. The currency is pressured but, for now, defensible; the external accounts are the strongest they have been in a decade. An investor who stopped reading here might call the environment a green light.</p>
+
+    <p>That reading would be a mistake. The calm is real but conditional — it rests on export competitiveness that a downturn or a turn in the semiconductor cycle could erode, and beneath it sit two genuine vulnerabilities: a multi-year rate inversion against the Fed, and a household-debt load among the heaviest in the world. Exports stabilize them today; they do not resolve them. And the binding constraint on deployment sits one level deeper still — domestic, structural, and beyond anything the buffer can fix.</p>
+  </div>
+</article>
+
+<!-- ========== PULL QUOTE 3 ========== -->
+<div class="pullquote reveal">
+  <p class="pullquote-text">Exports are holding the line.<br />The rate gap and the debt have not gone away —<br />they are <em>deferred, not defused</em>.</p>
+</div>
+
+<!-- ========== CHAPTER 04 — THE CONSTRAINT ========== -->
+<article class="chapter" id="ch4">
+  <div class="chapter-opener reveal">
+    <span class="chapter-num">Ⅳ</span>
+    <div class="chapter-eyebrow">THE THIRD READ · THE STRUCTURAL CONSTRAINT</div>
+    <h2>The Number the Buffer <em>Cannot Fix</em></h2>
+    <p class="chapter-lede">Household debt at 89.4% of GDP leaves the policymaker no room to ease. The crackdown that follows was built for speculative multi-home owners — but it does not distinguish them from corporate landlords.</p>
+  </div>
+
+  <div class="prose reveal">
+    <p>Korea's household-debt-to-GDP ratio sits at 89.4% — among the highest in the OECD — and on a <em>jeonse</em>-inclusive basis, which captures the lump-sum deposits that function as a parallel credit system, it is the highest in the world.<a href="#note-2" class="cite">2</a> This is the constraint that surface macro indicators obscure. Exports and a USD 415 billion reserve cushion absorb the BOK–Fed gap. But record household debt leaves the Bank of Korea no room to ease, because lower rates would re-accelerate the borrowing that the entire policy apparatus is trying to contain. Housing policy, as a result, stays restrictive — not for cyclical reasons, but structural ones.</p>
+
+    <div class="figure-inline">
+      <div class="label">Korea's Macro Stack · External Strength, Domestic Pressure</div>
+      <div class="grid">
+        <div>
+          <div class="num" style="color:var(--accent-red)">−1.25%</div>
+          <div class="sub">Policy rate gap · BOK 2.50% vs Fed 3.75% · sustained inversion pressuring KRW</div>
+        </div>
+        <div>
+          <div class="num">$427B</div>
+          <div class="sub">FX reserves · top-10 globally · ample buffer against external shocks</div>
+        </div>
+        <div>
+          <div class="num" style="color:var(--accent-red)">89.4%</div>
+          <div class="sub">Household debt / GDP · highest globally on a jeonse-inclusive basis · the binding constraint</div>
+        </div>
+        <div>
+          <div class="num">+48.0%</div>
+          <div class="sub">Export growth YoY · AI-driven semiconductor demand · 11 consecutive record months</div>
+        </div>
+      </div>
+    </div>
+
+    <p>The policy response to a household-debt overhang of this size is a crackdown on multi-home ownership — and Korea has run exactly that for several years. The logic is sound on its own terms: speculative ownership of multiple homes inflates prices and stacks household leverage, so the government strips the tax advantages and closes the financing that make speculative accumulation profitable. The instruments are blunt by design. Comprehensive real-estate tax aggregation applies to anyone holding multiple residential units. Loan-to-value limits on additional homes fall toward zero. These are effective tools against a speculator.</p>
+
+    <p>The problem is that the tools do not distinguish a speculator from a corporate rental operator. <strong>A platform that acquires a thousand apartments to rent them professionally looks, to the tax code and the lending rules, exactly like a speculator who has accumulated a thousand apartments to flip them.</strong> The policy built for one has landed indiscriminately on the other. And because the constraint driving it is structural household debt rather than a cyclical price spike, there is no near-term mechanism by which it loosens.</p>
+  </div>
+
+  <div class="prose reveal" style="margin-top: clamp(12px, 2vw, 24px);">
+    <p>The earlier history makes the shift concrete. From 2018 through 2025, global institutions entered Korean residential with conviction — Morgan Stanley, ICG, GIC, KKR, Nuveen, CPP Investments, Hines, M&amp;G, Greystar, The Living Company, APG, among others — partnering with local operators on multifamily and co-living portfolios, all working within the rule set as it then stood.<a href="#note-7" class="cite">7</a> Two measures in the second half of 2025 changed the arithmetic: a heavier property-tax burden on rental holdings and tighter limits on rental-housing lending. Underwriting assumptions shifted, and many platforms paused new deployment, holding capital on the sidelines awaiting policy clarity.</p>
+  </div>
+</article>
+
+<!-- ========== CHART 04: Why both routes break ========== -->
+<section class="chart-section reveal">
+  <div class="chart-intro">
+    <div class="eyebrow">Figure 04 · Institutional Operator Constraints</div>
+    <h3>Two paths in, both economically closed</h3>
+    <p>Institutional capital enters rental housing through one of two tracks — acquire existing stock, or build new. Post-2020 policy has constrained both. Below, where each track breaks for an institutional landlord.</p>
+  </div>
+  <div class="chart-container">
+    <div class="constraint-grid">
+      <div class="ct-card acquire">
+        <div class="track">Acquire-to-Rent · 01</div>
+        <h4>Property-tax exemption stripped</h4>
+        <p>The comprehensive real-estate tax aggregation exemption has been removed for acquired rental units. The resulting holding cost is <strong>punitive enough to make acquire-to-rent uneconomic</strong> on its own.</p>
+      </div>
+      <div class="ct-card acquire">
+        <div class="track">Acquire-to-Rent · 02</div>
+        <h4>Acquisition financing closed</h4>
+        <p>Lending to acquire rental units is effectively banned — multi-homeowner LTV sits near zero. <strong>The leverage that powered 2018–2025 portfolio scaling is no longer available.</strong></p>
+      </div>
+      <div class="ct-card build">
+        <div class="track">Build-to-Rent · 03</div>
+        <h4>Cost squeeze vs. the 5% rent cap</h4>
+        <p>Tax and financing incentives remain intact — but high land cost and KICT-indexed construction cost (up ~30% since 2021) collide with a <strong>5% rent cap the NOI ceiling cannot absorb</strong>.</p>
+      </div>
+      <div class="ct-card build">
+        <div class="track">Build-to-Rent · 04</div>
+        <h4>Ten-year lock-up</h4>
+        <p>A 10-year mandatory hold locks up capital well beyond typical closed-end fund maturities — <strong>a duration mismatch that drags realized IRR</strong> below institutional thresholds.</p>
+      </div>
+    </div>
+    <p class="chart-caption" style="margin-top:20px;">Acquire-to-rent — the strategy used to scale portfolios from 2018 to 2025 — has been shut down by the stripped tax exemption and closed acquisition financing. Build-to-rent retains its incentives, but rising land and construction costs outrun the 5% rent cap, leaving development IRR below institutional thresholds. With both routes constrained, fund-level deployment cannot scale through the standard private-rental tracks.</p>
+    <p class="chart-source"><strong>Source</strong> · Remarble compilation of Korean tax and lending measures (2020–2025) · operator underwriting frameworks</p>
+  </div>
+</section>
+
+<article class="chapter">
+  <div class="prose reveal">
+    <p>The result is a market with no scalable institutional pathway through conventional channels. Acquire-to-rent is closed by tax and financing. Build-to-rent remains technically open but is squeezed below return thresholds by the gap between rising costs and the rent cap. An institution that wants Seoul residential exposure cannot simply replicate the playbook that worked through 2025 — that door has closed behind the capital that already walked through it.</p>
+
+    <p class="note">The 5% cap is a contractual rent-increase ceiling on renewal within Korea's lease framework. Against a construction-cost index up roughly 30% since 2021, it compresses the spread between development cost and achievable rent — which is where build-to-rent IRR is made or lost.</p>
+  </div>
+</article>
+
+<!-- ========== PULL QUOTE 4 ========== -->
+<div class="pullquote reveal">
+  <p class="pullquote-text">A crackdown built for speculators<br />does not check whether the landlord<br />is <em>a speculator or an institution</em>.</p>
+</div>
+
+<!-- ========== CHAPTER 05 — SYNTHESIS ========== -->
+<article class="chapter" id="ch5">
+  <div class="chapter-opener reveal">
+    <span class="chapter-num">Ⅴ</span>
+    <div class="chapter-eyebrow">THE SYNTHESIS</div>
+    <h2>Sound Macro, <em>Closed Doors</em></h2>
+    <p class="chapter-lede">The macro environment supports the thesis. The policy regime blocks the obvious way to act on it. That gap — between a structural opportunity and a closed conventional pathway — is what the third essay takes up.</p>
+  </div>
+
+  <div class="prose reveal">
+    <p>The two reads of this essay do not cancel out — they layer. On the macro, Korea looks outwardly strong: near-USD 427 billion in reserves, record exports, and a current-account surplus that, for now, absorbs the pressure from a multi-year rate inversion. But that strength is export-financed and therefore contingent, and it sits above a household-debt load that is itself a latent risk. The weak won is an attractive entry point; the macro around it is calmer than it is safe.</p>
+
+    <p>On the policy, the picture inverts. The same household-debt overhang that gives the surface macro its tension leaves no room to ease, and the crackdown it forces has closed both conventional institutional entry routes. Acquire-to-rent is economically dead; build-to-rent is squeezed below return thresholds. The capital that entered with conviction from 2018 to 2025 now sits paused, waiting for a clarity that the structural nature of the constraint suggests will not arrive on a cyclical timetable.</p>
+
+    <div class="figure-inline">
+      <div class="label">Macro &amp; Policy · One Page</div>
+      <div class="grid">
+        <div>
+          <div class="num">Cost of Capital</div>
+          <div class="sub">BOK 2.50% · −125bps vs Fed · inversion 40+ months · KRW above 1,400</div>
+        </div>
+        <div>
+          <div class="num">The Buffer</div>
+          <div class="sub">Record current-account surplus · $427B reserves · exports +48% YoY</div>
+        </div>
+        <div>
+          <div class="num">The Constraint</div>
+          <div class="sub">Household debt 89.4% of GDP · jeonse-inclusive highest globally · no room to ease</div>
+        </div>
+        <div>
+          <div class="num">The Closure</div>
+          <div class="sub">Acquire-to-rent dead · build-to-rent squeezed by 5% cap · capital paused</div>
+        </div>
+      </div>
+    </div>
+
+    <p>This is the configuration that defines the Seoul opportunity today, and it is a more uncomfortable one than the first essay's clean structural read. The demand is rising, the supply is constrained, the macro is holding — on exports, and only for now — and yet the two pathways an institution would normally use to deploy are both closed. A lesser conclusion would call that a reason to wait. The harder, and more accurate, reading is that the closure of the conventional channels is precisely what keeps the bidder field thin while the structural case keeps strengthening.</p>
+
+    <p>The structural opportunity is compelling, but regulations intended to curb speculative multi-home ownership apply indiscriminately to corporate rental operators, narrowing the near-term addressable market to a defined niche. Capturing meaningful value therefore requires partnering with a local operator that already has the operational foundation in place. While current regulations limit the market to a niche, the structural shift is inevitable — and positioning early is what unlocks significant upside when the market opens.</p>
+
+    <p>Where those niches sit, and how operator partnerships are built and underwritten, is the subject of the third and final essay in this series. The macro holds. The policy doesn't. The work that remains is finding the route that runs between them.</p>
+  </div>
+</article>
+
+<!-- ========== CLOSING ========== -->
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-eyebrow">WHAT COMES NEXT</div>
+    <p class="closing-text">Demand and supply still point up.<br />Policy narrows the door to a niche.<br />The early operator-partner <em>takes the upside</em>.</p>
+    <p class="closing-signature">— MAY 2026 · THE SECOND OF THREE ESSAYS ON SEOUL</p>
+  </div>
+</section>
+
+<!-- ========== NOTES ========== -->
+<section class="notes-section" id="notes">
+  <div class="head">
+    <div class="eyebrow">REFERENCES</div>
+    <h3>Notes &amp; Sources</h3>
+  </div>
+  <div class="notes-list">
+    <ol>
+      <li id="note-1"><span class="kind">Central Bank Data</span>Bank of Korea base-rate series; US Federal Reserve / FRED effective federal funds rate; Bank of Japan, Reserve Bank of Australia, Monetary Authority of Singapore, and Hong Kong Monetary Authority policy-rate disclosures. Policy-rate gap and FX-reserve figures (~USD 427B) per BOK reserve statistics; Remarble compilation. Rate levels indicative as of the report date.</li>
+      <li id="note-2"><span class="kind">Comparative Data</span>OECD household-debt-to-GDP comparisons; Bank of Korea household-credit statistics. The <em>jeonse</em>-inclusive figure adds lump-sum lease deposits, which function as a parallel household-credit obligation, to conventional household debt — on this basis Korea ranks highest globally. Remarble analysis.</li>
+      <li id="note-3"><span class="kind">Government Statistics</span>Korea Customs Service / Ministry of Trade, Industry and Energy export statistics; semiconductor-led export growth and consecutive monthly records per published trade releases. Remarble compilation.</li>
+      <li id="note-4"><span class="kind">Market Data</span>KRW/USD exchange-rate series; US SEC / FRED and Bank of Korea rate histories; ValleyAI. Inversion-duration comparison (2005–07, 2018–19, 2022–present) and Remarble analysis. Chart series stylized for illustration.</li>
+      <li id="note-5"><span class="kind">Central Bank Data</span>Bank of Korea balance-of-payments / current-account series, 2000–2026; record-territory reading per BOK monthly releases. ValleyAI; Remarble compilation. Chart series stylized for illustration.</li>
+      <li id="note-6"><span class="kind">Central Bank Data</span>Bank of Korea official foreign-reserve statistics, 2000–2026; four-fold accumulation from ~USD 100B to ~USD 400B; 2022 drawdown and rebuild per BOK monthly reserve disclosures. Remarble analysis. Chart series stylized for illustration.</li>
+      <li id="note-7"><span class="kind">Capital Flows</span>Institutional entrants into Korean residential (2018–2025) compiled from public disclosures and corporate filings — including Morgan Stanley, ICG, GIC, KKR, Nuveen, CPP Investments, Hines, M&amp;G Investments, Greystar, The Living Company Korea, and APG. 2H 2025 property-tax and rental-housing-lending measures per Korean regulatory releases; Remarble compilation.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== COLOPHON ========== -->
+<footer class="full colophon">
+  <div class="block">
+    <h5>About This Essay</h5>
+    <p>The second of three essays reading Seoul's rental market for institutional investors. The first established the structural case — demand, supply, and capital converging. This essay reads the macro and policy environment around that case: cost of capital, the currency buffer, and the household-debt constraint that drives policy. The third lays out where opportunities sit and how operator partnerships work in the current regime.</p>
+  </div>
+  <div class="block">
+    <h5>Methodology Note</h5>
+    <p>Rate and macro time series in the figures are stylized for illustration and intended to convey direction, magnitude, and turning points rather than to serve as a data source of record; underlying levels follow Bank of Korea, US SEC / FRED, and ValleyAI releases. Policy-constraint descriptions summarize the practical effect of Korean tax and lending measures on institutional landlords and are not legal or tax advice.</p>
+  </div>
+  <div class="colophon-meta">
+    <span>© 2026 Remarble · APAC Real Estate Intelligence</span>
+    <span>Set in Newsreader and Playfair Display</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function() {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  const label = document.getElementById('themeLabel');
+
+  setTheme('dark');
+  function setTheme(mode) {
+    root.setAttribute('data-theme', mode);
+    document.body.setAttribute('data-theme', mode);
+    icon.textContent = mode === 'dark' ? '☀' : '☾';
+    label.textContent = mode === 'dark' ? 'Light' : 'Dark';
+  }
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    renderCharts();
+  });
+
+  // Reading progress
+  const progressEl = document.getElementById('progress');
+  function updateProgress() {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    progressEl.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ============== CHARTS ==============
+  const COLORS = {
+    primary:    '#05342C',
+    warm:       '#0FC76F',
+    warmSoft:   'rgba(15, 199, 111, 0.18)',
+    warmMid:    'rgba(15, 199, 111, 0.55)',
+    gold:       '#9A7028',
+    goldDark:   '#C9A55F',
+    goldSoft:   'rgba(154, 112, 40, 0.55)',
+    red:        '#E07A6B',
+    redSoft:    'rgba(224, 122, 107, 0.20)',
+    usBlue:     '#5BB8D4',
+    usBlueSoft: 'rgba(91, 184, 212, 0.18)',
+    krRed:      '#E08C8C',
+    neutral:    '#7D7A71',
+    neutralSoft:'rgba(125, 122, 113, 0.55)'
+  };
+
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
+  function gridColor() { return isDark() ? 'rgba(234,230,218,0.08)' : 'rgba(28,27,24,0.08)'; }
+  function tickColor() { return isDark() ? '#8B8779' : '#4A4842'; }
+  function bandColor() { return isDark() ? 'rgba(234,230,218,0.05)' : 'rgba(28,27,24,0.045)'; }
+  function bandLabelColor() { return isDark() ? '#6F6C62' : '#9A978E'; }
+
+  function applyDefaults() {
+    if (typeof Chart === 'undefined') return;
+    Chart.defaults.font.family = 'Inter, sans-serif';
+    Chart.defaults.font.size = 12;
+    Chart.defaults.color = tickColor();
+    Chart.defaults.plugins.tooltip.titleFont = { family: 'Inter', size: 12, weight: '600' };
+    Chart.defaults.plugins.tooltip.bodyFont = { family: 'Inter', size: 12 };
+    Chart.defaults.plugins.tooltip.padding = 10;
+    Chart.defaults.plugins.tooltip.cornerRadius = 4;
+    Chart.defaults.plugins.tooltip.backgroundColor = isDark() ? 'rgba(20,19,15,0.95)' : 'rgba(28,27,24,0.95)';
+    Chart.defaults.plugins.tooltip.borderColor = isDark() ? 'rgba(234,230,218,0.20)' : 'rgba(255,255,255,0.20)';
+    Chart.defaults.plugins.tooltip.borderWidth = 1;
+    Chart.defaults.plugins.tooltip.titleColor = '#EAE6DA';
+    Chart.defaults.plugins.tooltip.bodyColor = '#EAE6DA';
+  }
+
+  let chartRefs = [];
+
+  // ---- Shared monthly time axis 2000–2026 ----
+  const YEARS = [];
+  for (let y = 2000; y <= 2026; y++) YEARS.push(y);
+  // Build monthly labels (Jan of each year shown)
+  const MONTHS = [];
+  for (let y = 2000; y <= 2026; y++) {
+    for (let m = 0; m < 12; m++) {
+      if (y === 2026 && m > 3) break; // stop at Apr 2026
+      MONTHS.push({ y, m, t: y + m / 12 });
+    }
+  }
+  const xLabels = MONTHS.map(p => (p.m === 0 ? String(p.y) : ''));
+
+  // Recession / stress bands as fractional year ranges
+  const BANDS = [
+    { x0: 2000.6, x1: 2001.9, label: 'Dotcom Bubble' },
+    { x0: 2007.6, x1: 2009.1, label: 'Subprime' },
+    { x0: 2020.0, x1: 2021.4, label: 'Covid-19' }
+  ];
+
+  function tIndex(year) {
+    // nearest index for a fractional year
+    let best = 0, bestD = Infinity;
+    MONTHS.forEach((p, i) => { const d = Math.abs(p.t - year); if (d < bestD) { bestD = d; best = i; } });
+    return best;
+  }
+
+  // ---- Series generators (stylized, directionally faithful to slides) ----
+  // US effective federal funds rate (%)
+  function usRateSeries() {
+    const pts = [
+      [2000.0, 6.4], [2001.0, 5.5], [2002.0, 1.7], [2003.5, 1.0], [2004.5, 1.5],
+      [2006.0, 4.9], [2007.0, 5.2], [2008.0, 3.0], [2009.0, 0.15], [2015.0, 0.12],
+      [2016.0, 0.4], [2017.5, 1.2], [2018.8, 2.4], [2019.8, 1.6], [2020.3, 0.1],
+      [2022.0, 0.1], [2022.6, 1.7], [2023.0, 4.4], [2023.6, 5.1], [2024.0, 5.3],
+      [2024.8, 4.8], [2025.5, 4.1], [2026.3, 3.75]
+    ];
+    return interp(pts);
+  }
+  // Korea base rate (%)
+  function krRateSeries() {
+    const pts = [
+      [2000.0, 5.0], [2001.5, 4.5], [2003.0, 4.0], [2005.0, 3.5], [2006.5, 4.5],
+      [2008.0, 5.25], [2009.0, 2.0], [2010.5, 2.5], [2011.5, 3.25], [2013.0, 2.75],
+      [2015.0, 1.75], [2016.5, 1.25], [2018.0, 1.5], [2019.5, 1.5], [2020.3, 0.5],
+      [2021.5, 0.75], [2022.5, 2.5], [2023.0, 3.5], [2023.6, 3.5], [2024.5, 3.5],
+      [2025.2, 3.0], [2025.8, 2.5], [2026.3, 2.5]
+    ];
+    return interp(pts);
+  }
+  // KRW/USD (right axis, 800–1800)
+  function krwSeries() {
+    const pts = [
+      [2000.0, 1130], [2001.0, 1290], [2002.5, 1200], [2004.0, 1150], [2006.0, 950],
+      [2007.5, 930], [2008.8, 1480], [2009.5, 1250], [2011.0, 1080], [2013.0, 1090],
+      [2015.0, 1130], [2016.5, 1200], [2018.0, 1080], [2019.0, 1180], [2020.3, 1280],
+      [2021.0, 1130], [2022.0, 1230], [2022.8, 1430], [2023.5, 1320], [2024.0, 1380],
+      [2024.8, 1420], [2025.4, 1460], [2026.0, 1440], [2026.3, 1450]
+    ];
+    return interp(pts);
+  }
+  // Korea current account (USD mn, right axis -20k..30k)
+  function caSeries() {
+    const pts = [
+      [2000.0, 1500], [2002.0, 800], [2004.0, 3000], [2006.0, 1500], [2008.0, -1500],
+      [2009.0, 4000], [2011.0, 2500], [2013.0, 6000], [2015.0, 9000], [2016.0, 8500],
+      [2018.0, 6000], [2019.5, 4500], [2020.5, 6500], [2021.5, 8000], [2022.5, 2000],
+      [2023.2, -1000], [2023.8, 6000], [2024.5, 9000], [2025.2, 12000], [2025.8, 18000],
+      [2026.1, 25000], [2026.3, 21000]
+    ];
+    return interp(pts);
+  }
+  // Korea FX reserves (USD, right axis 0..500M shown as '000)
+  function fxResSeries() {
+    const pts = [
+      [2000.0, 96], [2002.0, 121], [2004.0, 199], [2006.0, 239], [2008.0, 201],
+      [2009.5, 270], [2011.0, 306], [2013.0, 346], [2015.0, 368], [2017.0, 389],
+      [2019.0, 409], [2020.5, 425], [2021.7, 463], [2022.5, 416], [2023.0, 420],
+      [2024.0, 415], [2025.0, 410], [2026.0, 400], [2026.3, 402]
+    ];
+    return interp(pts).map(v => v * 1000000); // to USD '000 scale base (million → display 0-500M)
+  }
+
+  // Linear interpolation across MONTHS time axis given control points [year, value]
+  function interp(pts) {
+    return MONTHS.map(p => {
+      const t = p.t;
+      if (t <= pts[0][0]) return pts[0][1];
+      if (t >= pts[pts.length - 1][0]) return pts[pts.length - 1][1];
+      for (let i = 0; i < pts.length - 1; i++) {
+        const [t0, v0] = pts[i], [t1, v1] = pts[i + 1];
+        if (t >= t0 && t <= t1) {
+          const f = (t - t0) / (t1 - t0);
+          return +(v0 + (v1 - v0) * f).toFixed(2);
+        }
+      }
+      return pts[pts.length - 1][1];
+    });
+  }
+
+  // Recession-band plugin
+  function bandsPlugin() {
+    return {
+      id: 'stressBands',
+      beforeDatasetsDraw: (chart) => {
+        const { ctx, chartArea: { top, bottom }, scales: { x } } = chart;
+        ctx.save();
+        BANDS.forEach(b => {
+          const xa = x.getPixelForValue(tIndex(b.x0));
+          const xb = x.getPixelForValue(tIndex(b.x1));
+          ctx.fillStyle = bandColor();
+          ctx.fillRect(xa, top, xb - xa, bottom - top);
+          ctx.font = '600 10px Inter';
+          ctx.fillStyle = bandLabelColor();
+          ctx.textAlign = 'center';
+          ctx.fillText(b.label, (xa + xb) / 2, top + 12);
+        });
+        ctx.restore();
+      }
+    };
+  }
+
+  function baseLineOptions(rightAxis) {
+    return {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'bottom', labels: { color: tickColor(), boxWidth: 10, boxHeight: 10, padding: 14, font: { size: 11 }, usePointStyle: true } },
+        tooltip: {
+          callbacks: {
+            title: (items) => { const i = items[0].dataIndex; const p = MONTHS[i]; const mn = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return mn[p.m] + ' ' + p.y; }
+          }
+        }
+      },
+      elements: { point: { radius: 0, hoverRadius: 4 } },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: {
+            color: tickColor(), autoSkip: false, maxRotation: 0,
+            font: { size: 10 },
+            callback: function(val, idx) {
+              const lbl = xLabels[idx];
+              if (!lbl) return '';
+              return (+lbl % 2 === 0) ? lbl : '';
+            }
+          }
+        },
+        y: {
+          position: 'left', min: 0, max: 7.5,
+          grid: { color: gridColor() },
+          ticks: { color: tickColor(), callback: v => v + '%', font: { size: 10 } },
+          title: { display: true, text: 'Policy rate (%)', color: tickColor(), font: { size: 10 } }
+        },
+        y1: rightAxis
+      }
+    };
+  }
+
+  function rateDatasets() {
+    return [
+      { label: 'US — Fed Funds Rate (%)', data: usRateSeries(), borderColor: COLORS.usBlue, backgroundColor: COLORS.usBlueSoft, borderWidth: 1.6, tension: 0.2, yAxisID: 'y', fill: false },
+      { label: 'Korea — Base Rate (%)', data: krRateSeries(), borderColor: COLORS.krRed, backgroundColor: 'transparent', borderWidth: 1.6, tension: 0.2, yAxisID: 'y', fill: false }
+    ];
+  }
+
+  // --- 01 Rate inversion & KRW ---
+  function renderFX() {
+    const el = document.getElementById('fxChart');
+    if (!el) return;
+    return new Chart(el, {
+      type: 'line',
+      data: { labels: xLabels, datasets: [
+        ...rateDatasets(),
+        { label: 'Korea — KRW/USD', data: krwSeries(), borderColor: COLORS.goldDark, backgroundColor: 'transparent', borderWidth: 2.4, tension: 0.25, yAxisID: 'y1', fill: false }
+      ]},
+      options: baseLineOptions({
+        position: 'right', min: 800, max: 1800,
+        grid: { drawOnChartArea: false },
+        ticks: { color: COLORS.goldDark, callback: v => v.toLocaleString(), font: { size: 10 } },
+        title: { display: true, text: 'KRW / USD', color: COLORS.goldDark, font: { size: 10 } }
+      }),
+      plugins: [bandsPlugin()]
+    });
+  }
+
+  // --- 02 Current account ---
+  function renderCA() {
+    const el = document.getElementById('caChart');
+    if (!el) return;
+    const opts = baseLineOptions({
+      position: 'right', min: -20000, max: 30000,
+      grid: { drawOnChartArea: false },
+      ticks: { color: '#3F4F4A', callback: v => (v/1000) + 'k', font: { size: 10 } },
+      title: { display: true, text: 'Current account (USD mn)', color: tickColor(), font: { size: 10 } }
+    });
+    const caColor = isDark() ? '#C9C5B8' : '#3A3A36';
+    return new Chart(el, {
+      type: 'line',
+      data: { labels: xLabels, datasets: [
+        ...rateDatasets(),
+        { label: 'Korea — Current Account (USD mn)', data: caSeries(), borderColor: caColor, backgroundColor: 'transparent', borderWidth: 2.2, tension: 0.25, yAxisID: 'y1', fill: false }
+      ]},
+      options: opts,
+      plugins: [bandsPlugin()]
+    });
+  }
+
+  // --- 03 FX reserves ---
+  function renderFXRes() {
+    const el = document.getElementById('fxResChart');
+    if (!el) return;
+    return new Chart(el, {
+      type: 'line',
+      data: { labels: xLabels, datasets: [
+        ...rateDatasets(),
+        { label: "Korea — FX Reserves (USD)", data: fxResSeries(), borderColor: COLORS.warm, backgroundColor: 'transparent', borderWidth: 2.6, tension: 0.3, yAxisID: 'y1', fill: false }
+      ]},
+      options: baseLineOptions({
+        position: 'right', min: 0, max: 500000000,
+        grid: { drawOnChartArea: false },
+        ticks: { color: COLORS.warm, callback: v => (v/1000000) + 'M', font: { size: 10 } },
+        title: { display: true, text: 'FX reserves (USD mn)', color: COLORS.warm, font: { size: 10 } }
+      }),
+      plugins: [bandsPlugin()]
+    });
+  }
+
+  function renderCharts() {
+    chartRefs.forEach(c => { if (c) c.destroy(); });
+    chartRefs = [];
+    applyDefaults();
+    chartRefs.push(renderFX());
+    chartRefs.push(renderCA());
+    chartRefs.push(renderFXRes());
+  }
+
+  if (typeof Chart !== 'undefined') {
+    renderCharts();
+  } else {
+    window.addEventListener('load', renderCharts);
+  }
+})();
+</script>
+
+</body>
+</html>
